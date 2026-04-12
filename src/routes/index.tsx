@@ -37,6 +37,7 @@ function Index() {
       <AboutSection />
       <ProcessSection />
       <TestimonialsSection />
+      <ProofSection />
       <CTASection />
       <Footer />
     </div>
