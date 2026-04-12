@@ -1,5 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import ContactForm from "@/components/ContactForm";
 
 export default function CTASection() {
   return (
@@ -20,40 +21,49 @@ export default function CTASection() {
           </p>
         </div>
 
-        <div className="reveal-on-scroll stagger-1 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="mailto:hello@pixarbros.com">
-            <Button variant="hero" size="xl" className="min-w-[200px]">
-              Start a Project
-            </Button>
-          </a>
-          <a
-            href="https://www.fiverr.com/users/rock_king319/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button
-              variant="heroOutline"
-              size="xl"
-              className="min-w-[200px] gap-2"
+        <div className="reveal-on-scroll stagger-1 mb-16">
+          <ContactForm />
+        </div>
+
+        <div className="reveal-on-scroll stagger-2">
+          <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground mb-6">
+            Or reach out directly
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="mailto:hello@pixarbros.com">
+              <Button variant="hero" size="xl" className="min-w-[200px]">
+                Start a Project
+              </Button>
+            </a>
+            <a
+              href="https://www.fiverr.com/users/rock_king319/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Message Me on Fiverr
-              <ArrowUpRight className="w-4 h-4" />
-            </Button>
-          </a>
-          <a
-            href="https://www.upwork.com/freelancers/~0195e286a6f1fa1c8c"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button
-              variant="heroOutline"
-              size="xl"
-              className="min-w-[200px] gap-2"
+              <Button
+                variant="heroOutline"
+                size="xl"
+                className="min-w-[200px] gap-2"
+              >
+                Message Me on Fiverr
+                <ArrowUpRight className="w-4 h-4" />
+              </Button>
+            </a>
+            <a
+              href="https://www.upwork.com/freelancers/~0195e286a6f1fa1c8c"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Hire on Upwork
-              <ArrowUpRight className="w-4 h-4" />
-            </Button>
-          </a>
+              <Button
+                variant="heroOutline"
+                size="xl"
+                className="min-w-[200px] gap-2"
+              >
+                Hire on Upwork
+                <ArrowUpRight className="w-4 h-4" />
+              </Button>
+            </a>
+          </div>
         </div>
       </div>
     </section>
