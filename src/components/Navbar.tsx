@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import pixarbrosLogo from "@/assets/pixarbros-logo.png";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -16,8 +17,9 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-16 md:h-20">
-        <a href="#" className="text-foreground font-heading text-lg md:text-xl font-bold tracking-tight">
-          Pixarbros
+        <a href="#" className="flex items-center gap-3">
+          <img src={pixarbrosLogo} alt="Pixarbros" className="h-8 md:h-9 w-auto" />
+          <span className="text-foreground font-heading text-lg md:text-xl font-bold tracking-tight">Pixarbros</span>
         </a>
         <div className="hidden md:flex items-center gap-10 text-xs tracking-widest uppercase text-muted-foreground">
           <a href="#work" className="hover:text-foreground transition-colors duration-300">Work</a>

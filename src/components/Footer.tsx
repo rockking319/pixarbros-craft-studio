@@ -1,10 +1,15 @@
+import pixarbrosLogo from "@/assets/pixarbros-logo.png";
+
 export default function Footer() {
   return (
     <footer className="border-t border-border py-16 md:py-20">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
           <div>
-            <p className="font-heading text-lg font-bold tracking-tight mb-2">Pixarbros</p>
+            <div className="flex items-center gap-3 mb-2">
+              <img src={pixarbrosLogo} alt="Pixarbros" className="h-6 w-auto" />
+              <span className="font-heading text-lg font-bold tracking-tight">Pixarbros</span>
+            </div>
             <p className="text-sm text-muted-foreground">Design that moves brands forward.</p>
           </div>
           <div className="flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-12">

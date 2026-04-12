@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import pixarbrosLogo from "@/assets/pixarbros-logo.png";
 
 export default function HeroSection() {
   return (
@@ -13,6 +14,9 @@ export default function HeroSection() {
       </div>
 
       <div className="max-w-5xl mx-auto text-center relative z-10">
+        <div className="flex justify-center mb-10 animate-reveal-fade" style={{ animationDelay: "0.1s" }}>
+          <img src={pixarbrosLogo} alt="Pixarbros" className="h-16 md:h-20 w-auto opacity-80" />
+        </div>
         <p className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-8 animate-reveal-fade" style={{ animationDelay: "0.2s" }}>
           Creative Studio
         </p>
