@@ -8,6 +8,7 @@ import WorkSection from "@/components/WorkSection";
 import AboutSection from "@/components/AboutSection";
 import ProcessSection from "@/components/ProcessSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import ProofSection from "@/components/ProofSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 
@@ -36,6 +37,7 @@ function Index() {
       <AboutSection />
       <ProcessSection />
       <TestimonialsSection />
+      <ProofSection />
       <CTASection />
       <Footer />
     </div>
