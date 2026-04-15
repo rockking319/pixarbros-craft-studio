@@ -1,5 +1,11 @@
 import { ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import project3dIcons from "@/assets/project-3d-icons.jpg";
+import projectOlaxbt from "@/assets/project-olaxbt.jpg";
+import projectCwcLinea from "@/assets/project-cwc-linea.jpg";
+import projectBwIcons from "@/assets/project-bw-icons.jpg";
+import projectApe from "@/assets/project-ape.jpg";
+import projectRabbit from "@/assets/project-rabbit.jpg";
 
 const projects = [
   {
@@ -7,36 +13,42 @@ const projects = [
     category: "3D Design",
     description: "High-quality 3D icon set for modern UI interfaces",
     behanceUrl: "https://www.behance.net/mr_sadam",
+    image: project3dIcons,
   },
   {
     title: "OLAXBT Crypto Stickers Project",
     category: "Animation",
     description: "Custom animated sticker pack for crypto brand identity",
     behanceUrl: "https://www.behance.net/mr_sadam",
+    image: projectOlaxbt,
   },
   {
     title: "CWC Linea Crypto Project",
     category: "Branding",
     description: "Full brand sticker system for blockchain platform",
     behanceUrl: "https://www.behance.net/mr_sadam",
+    image: projectCwcLinea,
   },
   {
     title: "Black and White Icons & Logos",
     category: "Brand Identity",
     description: "Minimal monochrome icon and logo design collection",
     behanceUrl: "https://www.behance.net/mr_sadam",
+    image: projectBwIcons,
   },
   {
     title: "APE Crypto Project",
     category: "Animation",
     description: "Telegram sticker animations for APE crypto community",
     behanceUrl: "https://www.behance.net/mr_sadam",
+    image: projectApe,
   },
   {
     title: "UNIQUE RABBIT Characters",
     category: "Character Design",
     description: "Unique and diverse character styles for digital brand",
     behanceUrl: "https://www.behance.net/mr_sadam",
+    image: projectRabbit,
   },
 ];
 
@@ -65,18 +77,18 @@ export default function WorkSection() {
               rel="noopener noreferrer"
               className={`reveal-on-scroll stagger-${i + 1} group relative bg-secondary border border-border overflow-hidden cursor-pointer transition-all duration-500 hover:border-muted-foreground/40 hover:shadow-lg block`}
             >
-              <div className="aspect-[16/10] bg-muted flex items-center justify-center overflow-hidden">
-                <div className="transition-transform duration-700 group-hover:scale-110 flex flex-col items-center justify-center gap-2">
-                  <span className="text-muted-foreground/50 text-sm tracking-widest uppercase">
-                    {p.category}
-                  </span>
-                  <span className="text-muted-foreground/30 font-heading text-2xl md:text-3xl font-bold tracking-tight">
-                    {p.title}
-                  </span>
-                </div>
+              <div className="aspect-[16/10] bg-muted overflow-hidden relative">
+                <img
+                  src={p.image}
+                  alt={p.title}
+                  loading="lazy"
+                  width={960}
+                  height={600}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
                 <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/5 transition-colors duration-500" />
                 <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <ArrowUpRight className="w-5 h-5 text-muted-foreground" />
+                  <ArrowUpRight className="w-5 h-5 text-background bg-foreground/70 rounded-full p-0.5" />
                 </div>
               </div>
               <div className="p-6 md:p-8 bg-background">
