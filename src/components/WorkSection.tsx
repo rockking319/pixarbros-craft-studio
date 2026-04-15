@@ -49,7 +49,7 @@ export default function WorkSection() {
             Selected Work
           </p>
           <h2 className="font-heading text-3xl md:text-5xl font-bold tracking-tight">
-            Selected Work
+            Featured <span className="text-muted-foreground">Projects.</span>
           </h2>
         </div>
         <p className="reveal-on-scroll text-muted-foreground text-base md:text-lg mb-16 max-w-xl">
@@ -63,24 +63,23 @@ export default function WorkSection() {
               href={p.behanceUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className={`reveal-on-scroll stagger-${i + 1} group relative bg-card border border-border overflow-hidden cursor-pointer transition-all duration-500 hover:border-muted-foreground/30 block`}
+              className={`reveal-on-scroll stagger-${i + 1} group relative bg-secondary border border-border overflow-hidden cursor-pointer transition-all duration-500 hover:border-muted-foreground/40 hover:shadow-lg block`}
             >
-              <div className="aspect-[16/10] bg-secondary flex items-center justify-center overflow-hidden">
+              <div className="aspect-[16/10] bg-muted flex items-center justify-center overflow-hidden">
                 <div className="transition-transform duration-700 group-hover:scale-110 flex flex-col items-center justify-center gap-2">
-                  <span className="text-muted-foreground/30 text-sm tracking-widest uppercase">
+                  <span className="text-muted-foreground/50 text-sm tracking-widest uppercase">
                     {p.category}
                   </span>
-                  <span className="text-muted-foreground/15 font-heading text-2xl md:text-3xl font-bold tracking-tight">
+                  <span className="text-muted-foreground/30 font-heading text-2xl md:text-3xl font-bold tracking-tight">
                     {p.title}
                   </span>
                 </div>
-                {/* Hover overlay */}
                 <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/5 transition-colors duration-500" />
                 <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                   <ArrowUpRight className="w-5 h-5 text-muted-foreground" />
                 </div>
               </div>
-              <div className="p-6 md:p-8">
+              <div className="p-6 md:p-8 bg-background">
                 <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground mb-2">
                   {p.category}
                 </p>

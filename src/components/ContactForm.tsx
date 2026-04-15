@@ -37,7 +37,7 @@ export default function ContactForm() {
           placeholder="Your name"
           value={formData.name}
           onChange={(e) => setFormData((d) => ({ ...d, name: e.target.value }))}
-          className="bg-transparent border-border rounded-none h-12 text-foreground placeholder:text-muted-foreground/50 focus-visible:ring-foreground"
+          className="bg-transparent border-border rounded-none h-12 text-foreground placeholder:text-muted-foreground/40 focus-visible:ring-foreground"
         />
       </div>
 
@@ -53,7 +53,7 @@ export default function ContactForm() {
           placeholder="your@email.com"
           value={formData.email}
           onChange={(e) => setFormData((d) => ({ ...d, email: e.target.value }))}
-          className="bg-transparent border-border rounded-none h-12 text-foreground placeholder:text-muted-foreground/50 focus-visible:ring-foreground"
+          className="bg-transparent border-border rounded-none h-12 text-foreground placeholder:text-muted-foreground/40 focus-visible:ring-foreground"
         />
       </div>
 
@@ -69,7 +69,7 @@ export default function ContactForm() {
           placeholder="Tell me about your project..."
           value={formData.message}
           onChange={(e) => setFormData((d) => ({ ...d, message: e.target.value }))}
-          className="bg-transparent border-border rounded-none text-foreground placeholder:text-muted-foreground/50 focus-visible:ring-foreground resize-none"
+          className="bg-transparent border-border rounded-none text-foreground placeholder:text-muted-foreground/40 focus-visible:ring-foreground resize-none"
         />
       </div>
 

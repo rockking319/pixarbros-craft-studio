@@ -20,7 +20,7 @@ export default function ProcessSection() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-border">
           {steps.map((step, i) => (
             <div key={step.title} className={`reveal-on-scroll stagger-${i + 1} bg-background p-8 md:p-10 text-center group`}>
-              <div className="inline-flex items-center justify-center w-12 h-12 border border-border rounded-full mb-6 group-hover:border-muted-foreground/50 transition-colors duration-500">
+              <div className="inline-flex items-center justify-center w-12 h-12 border border-border rounded-full mb-6 group-hover:border-foreground/30 transition-colors duration-500">
                 <step.icon className="w-5 h-5 text-muted-foreground group-hover:text-foreground transition-colors duration-500" strokeWidth={1.5} />
               </div>
               <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground mb-2">0{i + 1}</p>

@@ -37,12 +37,12 @@ export default function ServicesSection() {
           {services.map((s, i) => (
             <div
               key={s.title}
-              className={`reveal-on-scroll stagger-${i + 1} group bg-background p-8 md:p-12 transition-colors duration-500 hover:bg-card cursor-default`}
+              className={`reveal-on-scroll stagger-${i + 1} group bg-background p-8 md:p-12 transition-all duration-500 hover:bg-secondary cursor-default`}
             >
               <s.icon className="w-6 h-6 text-muted-foreground mb-8 group-hover:text-foreground transition-colors duration-500" strokeWidth={1.5} />
               <h3 className="font-heading text-lg md:text-xl font-semibold mb-2 tracking-tight">{s.title}</h3>
               <p className="text-sm text-muted-foreground mb-6">{s.desc}</p>
-              <p className="text-sm text-muted-foreground/60 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <p className="text-sm text-muted-foreground/50 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 {s.detail}
               </p>
             </div>
