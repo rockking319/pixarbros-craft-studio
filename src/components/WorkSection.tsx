@@ -6,49 +6,81 @@ import projectCwcLinea from "@/assets/project-cwc-linea.jpg";
 import projectBwIcons from "@/assets/project-bw-icons.jpg";
 import projectApe from "@/assets/project-ape.jpg";
 import projectRabbit from "@/assets/project-rabbit.jpg";
+import projectWiwi from "@/assets/project-wiwi.jpg";
+import projectA1Cat from "@/assets/project-a1cat.jpg";
+import projectEmoji from "@/assets/project-emoji.jpg";
+import projectBlueCharry from "@/assets/project-bluecharry.jpg";
 
 const projects = [
   {
     title: "Modern UI 3D Icons Pack",
     category: "3D Design",
     description: "High-quality 3D icon set for modern UI interfaces",
-    behanceUrl: "https://www.behance.net/mr_sadam",
+    behanceUrl: "https://www.behance.net/gallery/245836527/Modern-UI-3D-Icons-Pack",
     image: project3dIcons,
   },
   {
     title: "OLAXBT Crypto Stickers Project",
     category: "Animation",
     description: "Custom animated sticker pack for crypto brand identity",
-    behanceUrl: "https://www.behance.net/mr_sadam",
+    behanceUrl: "https://www.behance.net/gallery/227755963/OLAXBT-Crypto-Stickers-Project",
     image: projectOlaxbt,
   },
   {
     title: "CWC Linea Crypto Project",
     category: "Branding",
     description: "Full brand sticker system for blockchain platform",
-    behanceUrl: "https://www.behance.net/mr_sadam",
+    behanceUrl: "https://www.behance.net/gallery/227753557/CWC-Linea-Crypto-project",
     image: projectCwcLinea,
   },
   {
     title: "Black and White Icons & Logos",
     category: "Brand Identity",
     description: "Minimal monochrome icon and logo design collection",
-    behanceUrl: "https://www.behance.net/mr_sadam",
+    behanceUrl: "https://www.behance.net/gallery/216605199/Black-and-white-Icons-and-logos",
     image: projectBwIcons,
   },
   {
     title: "APE Crypto Project",
     category: "Animation",
     description: "Telegram sticker animations for APE crypto community",
-    behanceUrl: "https://www.behance.net/mr_sadam",
+    behanceUrl: "https://www.behance.net/gallery/181516373/APE-Crypto-Project",
     image: projectApe,
   },
   {
     title: "UNIQUE RABBIT Characters",
     category: "Character Design",
     description: "Unique and diverse character styles for digital brand",
-    behanceUrl: "https://www.behance.net/mr_sadam",
+    behanceUrl: "https://www.behance.net/gallery/177198579/UNIQUE-RABBIT",
     image: projectRabbit,
+  },
+  {
+    title: "WiWi Character Animation",
+    category: "Animation",
+    description: "Expressive character animation for digital sticker pack",
+    behanceUrl: "https://www.behance.net/gallery/176756989/WiWi-Character-Animation",
+    image: projectWiwi,
+  },
+  {
+    title: "A1 Business Cat Animation",
+    category: "Animation",
+    description: "Professional animated cat character stickers for Telegram",
+    behanceUrl: "https://www.behance.net/gallery/175377857/A1-Business-Cat-Animation",
+    image: projectA1Cat,
+  },
+  {
+    title: "Animated Emoji Pack",
+    category: "Animation",
+    description: "Fun and expressive animated emoji collection",
+    behanceUrl: "https://www.behance.net/gallery/171311211/Animated-Emoji-Pack",
+    image: projectEmoji,
+  },
+  {
+    title: "Blue Charry Animation",
+    category: "Animation",
+    description: "Charming character animation for messaging platforms",
+    behanceUrl: "https://www.behance.net/gallery/176750905/Blue-Charry-Animation",
+    image: projectBlueCharry,
   },
 ];
 
@@ -75,7 +107,7 @@ export default function WorkSection() {
               href={p.behanceUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className={`reveal-on-scroll stagger-${i + 1} group relative bg-secondary border border-border overflow-hidden cursor-pointer transition-all duration-500 hover:border-muted-foreground/40 hover:shadow-lg block`}
+              className={`reveal-on-scroll stagger-${Math.min(i + 1, 6)} group relative bg-secondary border border-border overflow-hidden cursor-pointer transition-all duration-500 hover:border-muted-foreground/40 hover:shadow-lg block`}
             >
               <div className="aspect-[16/10] bg-muted overflow-hidden relative">
                 <img
