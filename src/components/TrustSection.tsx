@@ -2,7 +2,7 @@ export default function TrustSection() {
   const clients = ["Acme Corp", "Nebula", "Vertex", "Horizon", "Lumina", "Prism"];
 
   return (
-    <section className="py-20 md:py-28 border-t border-border">
+    <section className="py-16 md:py-24 border-t border-border">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="reveal-on-scroll">
           <p className="text-xs tracking-[0.3em] uppercase text-muted-foreground text-center mb-14">
@@ -15,7 +15,7 @@ export default function TrustSection() {
               key={client}
               className={`reveal-on-scroll stagger-${i + 1} flex items-center justify-center py-4`}
             >
-              <span className="text-sm md:text-base font-heading font-semibold tracking-wider uppercase text-muted-foreground/50 hover:text-muted-foreground transition-colors duration-500">
+              <span className="text-sm md:text-base font-heading font-semibold tracking-wider uppercase text-muted-foreground/40 hover:text-muted-foreground transition-colors duration-500">
                 {client}
               </span>
             </div>

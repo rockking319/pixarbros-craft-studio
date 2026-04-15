@@ -40,11 +40,7 @@ export default function CTASection() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button
-                variant="heroOutline"
-                size="xl"
-                className="min-w-[200px] gap-2"
-              >
+              <Button variant="heroOutline" size="xl" className="min-w-[200px] gap-2">
                 Message Me on Fiverr
                 <ArrowUpRight className="w-4 h-4" />
               </Button>
@@ -54,11 +50,7 @@ export default function CTASection() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button
-                variant="heroOutline"
-                size="xl"
-                className="min-w-[200px] gap-2"
-              >
+              <Button variant="heroOutline" size="xl" className="min-w-[200px] gap-2">
                 Hire on Upwork
                 <ArrowUpRight className="w-4 h-4" />
               </Button>
