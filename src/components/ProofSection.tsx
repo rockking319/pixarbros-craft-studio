@@ -41,7 +41,7 @@ const platforms = [
     description: "See client projects, reviews, and active services.",
     button: "View Fiverr Profile",
     url: "https://www.fiverr.com/users/rock_king319/",
-    Icon: FiverrIcon,
+    Icon: ({ className }: { className?: string }) => <img src={fiverrLogo} alt="Fiverr" className={`${className} rounded-full object-cover`} />,
   },
   {
     title: "Upwork",
