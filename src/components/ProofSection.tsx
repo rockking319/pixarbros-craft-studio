@@ -1,6 +1,7 @@
 import { ArrowUpRight, Briefcase, Star, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import fiverrLogo from "@/assets/fiverr-logo.png";
+import upworkLogo from "@/assets/upwork-logo.png";
 
 function BehanceIcon({ className }: { className?: string }) {
   return (
@@ -49,7 +50,7 @@ const platforms = [
     description: "Verified freelance profile with client history.",
     button: "View Upwork Profile",
     url: "https://www.upwork.com/freelancers/~0195e286a6f1fa1c8c",
-    Icon: UpworkIcon,
+    Icon: ({ className }: { className?: string }) => <img src={upworkLogo} alt="Upwork" className={`${className} rounded-full object-cover`} />,
   },
 ];
 
