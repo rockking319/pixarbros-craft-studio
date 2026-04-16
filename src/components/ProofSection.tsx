@@ -1,5 +1,6 @@
 import { ArrowUpRight, Briefcase, Star, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import fiverrLogo from "@/assets/fiverr-logo.png";
 
 function BehanceIcon({ className }: { className?: string }) {
   return (
