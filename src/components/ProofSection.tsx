@@ -1,5 +1,6 @@
 import { ArrowUpRight, Briefcase, Star, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import fiverrLogo from "@/assets/fiverr-logo.png";
 
 function BehanceIcon({ className }: { className?: string }) {
   return (
@@ -40,7 +41,7 @@ const platforms = [
     description: "See client projects, reviews, and active services.",
     button: "View Fiverr Profile",
     url: "https://www.fiverr.com/users/rock_king319/",
-    Icon: FiverrIcon,
+    Icon: ({ className }: { className?: string }) => <img src={fiverrLogo} alt="Fiverr" className={`${className} rounded-full object-cover`} />,
   },
   {
     title: "Upwork",
