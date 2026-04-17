@@ -1,4 +1,4 @@
-import { ArrowUpRight, Briefcase, Star, Users } from "lucide-react";
+import { ArrowUpRight, Briefcase, Star, Users, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import fiverrLogo from "@/assets/fiverr-logo.png";
 import upworkLogo from "@/assets/upwork-logo.png";
