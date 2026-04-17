@@ -103,7 +103,7 @@ export default function ProofSection() {
           ))}
         </div>
 
-        <div className="grid md:grid-cols-3 gap-4 md:gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {platforms.map((p, i) => (
             <a
               key={p.title}

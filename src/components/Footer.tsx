@@ -20,6 +20,7 @@ export default function Footer() {
               <a href="https://www.behance.net/mr_sadam" target="_blank" rel="noopener noreferrer" className="text-xs tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors duration-300">Behance</a>
               <a href="https://www.fiverr.com/users/rock_king319/" target="_blank" rel="noopener noreferrer" className="text-xs tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors duration-300">Fiverr</a>
               <a href="https://www.upwork.com/freelancers/~0195e286a6f1fa1c8c" target="_blank" rel="noopener noreferrer" className="text-xs tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors duration-300">Upwork</a>
+              <a href="https://t.me/pixarbros" target="_blank" rel="noopener noreferrer" className="text-xs tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors duration-300">Telegram</a>
             </div>
           </div>
         </div>
