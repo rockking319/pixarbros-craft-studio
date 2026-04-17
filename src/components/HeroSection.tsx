@@ -58,7 +58,7 @@ export default function HeroSection() {
         <p className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-8 animate-reveal-fade" style={{ animationDelay: "0.2s" }}>
           Creative Studio — Animator · Designer · Developer
         </p>
-        <h1 className="font-heading text-5xl sm:text-6xl md:text-8xl lg:text-[8.5rem] font-semibold uppercase mb-8 animate-reveal-up" style={{ animationDelay: "0.3s", color: "#0f0f0f", letterSpacing: "0.02em", lineHeight: "1.05" }}>
+        <h1 className="font-heading text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-semibold uppercase mb-8 animate-reveal-up whitespace-nowrap" style={{ animationDelay: "0.3s", color: "#0f0f0f", letterSpacing: "0.02em", lineHeight: "1.05" }}>
           <span className="block">Design. Motion.</span>
           <span className="block text-center">Code.</span>
         </h1>
