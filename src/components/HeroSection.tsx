@@ -76,7 +76,7 @@ export default function HeroSection() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground animate-reveal-fade" style={{ animationDelay: "1.2s" }}>
+      <div className="hidden md:flex absolute bottom-6 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-muted-foreground animate-reveal-fade pointer-events-none" style={{ animationDelay: "1.2s" }}>
         <span className="text-[10px] tracking-[0.3em] uppercase">Scroll</span>
         <div className="w-px h-8 bg-gradient-to-b from-muted-foreground to-transparent" />
       </div>
