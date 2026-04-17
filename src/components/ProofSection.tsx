@@ -1,4 +1,4 @@
-import { ArrowUpRight, Briefcase, Star, Users } from "lucide-react";
+import { ArrowUpRight, Briefcase, Star, Users, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import fiverrLogo from "@/assets/fiverr-logo.png";
 import upworkLogo from "@/assets/upwork-logo.png";
@@ -52,6 +52,14 @@ const platforms = [
     url: "https://www.upwork.com/freelancers/~0195e286a6f1fa1c8c",
     Icon: ({ className }: { className?: string }) => <img src={upworkLogo} alt="Upwork" className={`${className} rounded-full object-cover`} />,
   },
+  {
+    title: "Telegram Channel",
+    platform: "Telegram",
+    description: "Join for updates, behind-the-scenes & exclusive insights.",
+    button: "Join on Telegram",
+    url: "https://t.me/pixarbros",
+    Icon: Send,
+  },
 ];
 
 const stats = [
@@ -95,7 +103,7 @@ export default function ProofSection() {
           ))}
         </div>
 
-        <div className="grid md:grid-cols-3 gap-4 md:gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {platforms.map((p, i) => (
             <a
               key={p.title}

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Send } from "lucide-react";
 import pixarbrosLogo from "@/assets/pixarbros-logo.png";
 
 const navLinks = [
@@ -53,6 +53,15 @@ export default function Navbar() {
                 {l.label}
               </a>
             ))}
+            <a
+              href="https://t.me/pixarbros"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Join on Telegram"
+              className="text-muted-foreground hover:text-foreground transition-colors duration-300"
+            >
+              <Send className="w-4 h-4" />
+            </a>
             <a
               href="#contact"
               className="border border-foreground px-5 py-2 text-foreground hover:bg-foreground hover:text-background transition-all duration-300"
