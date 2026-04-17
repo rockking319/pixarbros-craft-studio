@@ -52,6 +52,14 @@ const platforms = [
     url: "https://www.upwork.com/freelancers/~0195e286a6f1fa1c8c",
     Icon: ({ className }: { className?: string }) => <img src={upworkLogo} alt="Upwork" className={`${className} rounded-full object-cover`} />,
   },
+  {
+    title: "Telegram Channel",
+    platform: "Telegram",
+    description: "Join for updates, behind-the-scenes & exclusive insights.",
+    button: "Join on Telegram",
+    url: "https://t.me/pixarbros",
+    Icon: Send,
+  },
 ];
 
 const stats = [
