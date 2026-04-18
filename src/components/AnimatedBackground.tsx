@@ -60,9 +60,9 @@ export default function AnimatedBackground() {
 
   return (
     <div
-      className="fixed inset-0 -z-10 pointer-events-none overflow-hidden"
+      className="fixed inset-0 pointer-events-none overflow-hidden"
       aria-hidden="true"
-      style={{ perspective: "1200px" }}
+      style={{ perspective: "1200px", zIndex: -1 }}
     >
       {/* Base soft gradient wash */}
       <div
