@@ -2,7 +2,7 @@ import pixarbrosLogo from "@/assets/pixarbros-logo.png";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-border py-16 md:py-20">
+    <footer className="relative border-t border-white/30 py-16 md:py-20 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
           <div>

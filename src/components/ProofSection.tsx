@@ -70,7 +70,7 @@ const stats = [
 
 export default function ProofSection() {
   return (
-    <section id="proof" className="py-24 md:py-36 border-t border-border">
+    <section id="proof" className="relative py-24 md:py-36">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="reveal-on-scroll mb-6">
           <p className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-4">
@@ -103,44 +103,59 @@ export default function ProofSection() {
           ))}
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-          {platforms.map((p, i) => (
-            <a
-              key={p.title}
-              href={p.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`reveal-on-scroll stagger-${i + 1} group relative bg-card border border-border p-8 md:p-10 flex flex-col transition-all duration-500 hover:border-muted-foreground/30 hover:shadow-[0_8px_30px_-12px_hsl(var(--foreground)/0.1)] hover:-translate-y-1`}
-            >
-              <div className="w-12 h-12 border border-border flex items-center justify-center mb-8 group-hover:border-muted-foreground/40 transition-all duration-500">
-                <p.Icon className="w-6 h-6 text-muted-foreground group-hover:text-foreground transition-colors duration-500" />
-              </div>
-
-              <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground mb-2">
-                {p.platform}
-              </p>
-              <h3 className="font-heading text-xl md:text-2xl font-semibold tracking-tight mb-3">
-                {p.title}
-              </h3>
-              <p className="text-sm text-muted-foreground mb-8 flex-1">
-                {p.description}
-              </p>
-
-              <Button
-                variant="heroOutline"
-                size="default"
-                className="w-full gap-2 justify-center"
-                asChild
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {platforms.map((p, i) => {
+            const gradients = [
+              { grad: "from-[#FF6B6B] to-[#FF8E53]", glow: "rgba(255,107,107,0.4)" },
+              { grad: "from-[#7F5BFF] to-[#A56BFF]", glow: "rgba(127,91,255,0.4)" },
+              { grad: "from-[#00D4FF] to-[#3BA1FF]", glow: "rgba(0,212,255,0.4)" },
+              { grad: "from-[#FF6BD6] to-[#7F5BFF]", glow: "rgba(255,107,214,0.4)" },
+            ];
+            const g = gradients[i];
+            return (
+              <a
+                key={p.title}
+                href={p.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`reveal-on-scroll stagger-${i + 1} group relative glass-card rounded-2xl p-8 md:p-10 flex flex-col transition-all duration-500 hover:-translate-y-2 overflow-hidden`}
+                style={{ boxShadow: `0 8px 32px -12px ${g.glow}` }}
               >
-                <span>
-                  {p.button}
-                  <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                </span>
-              </Button>
+                <div className={`absolute -top-20 -right-20 w-48 h-48 rounded-full bg-gradient-to-br ${g.grad} opacity-25 blur-2xl group-hover:opacity-60 transition-opacity duration-500 pointer-events-none`} />
 
-              <div className="absolute bottom-0 left-0 w-full h-px bg-foreground transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700" />
-            </a>
-          ))}
+                <div
+                  className={`relative w-14 h-14 rounded-xl bg-gradient-to-br ${g.grad} flex items-center justify-center mb-8 shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6`}
+                  style={{ boxShadow: `0 10px 30px -8px ${g.glow}` }}
+                >
+                  <p.Icon className="w-6 h-6 text-white" />
+                </div>
+
+                <p className="relative text-xs tracking-[0.2em] uppercase text-muted-foreground mb-2">
+                  {p.platform}
+                </p>
+                <h3 className="relative font-heading text-xl md:text-2xl font-semibold tracking-tight mb-3">
+                  {p.title}
+                </h3>
+                <p className="relative text-sm text-muted-foreground mb-8 flex-1">
+                  {p.description}
+                </p>
+
+                <Button
+                  variant="heroOutline"
+                  size="default"
+                  className="relative w-full gap-2 justify-center"
+                  asChild
+                >
+                  <span>
+                    {p.button}
+                    <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </span>
+                </Button>
+
+                <div className={`absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r ${g.grad} transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700`} />
+              </a>
+            );
+          })}
         </div>
       </div>
     </section>

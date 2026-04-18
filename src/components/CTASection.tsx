@@ -4,7 +4,7 @@ import ContactForm from "@/components/ContactForm";
 
 export default function CTASection() {
   return (
-    <section id="contact" className="py-32 md:py-44 border-t border-border">
+    <section id="contact" className="relative py-32 md:py-44">
       <div className="max-w-4xl mx-auto px-6 md:px-12 text-center">
         <div className="reveal-on-scroll">
           <p className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-6">

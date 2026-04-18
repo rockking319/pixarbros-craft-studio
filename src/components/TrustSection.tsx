@@ -2,7 +2,7 @@ export default function TrustSection() {
   const clients = ["Acme Corp", "Nebula", "Vertex", "Horizon", "Lumina", "Prism"];
 
   return (
-    <section className="py-16 md:py-24 border-t border-border">
+    <section className="relative py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="reveal-on-scroll">
           <p className="text-xs tracking-[0.3em] uppercase text-muted-foreground text-center mb-14">
