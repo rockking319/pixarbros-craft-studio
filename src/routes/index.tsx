@@ -31,17 +31,19 @@ function Index() {
   return (
     <div ref={ref} className="relative">
       <AnimatedBackground />
-      <Navbar />
-      <HeroSection />
-      <TrustSection />
-      <ServicesSection />
-      <WorkSection />
-      <AboutSection />
-      <ProcessSection />
-      <TestimonialsSection />
-      <ProofSection />
-      <CTASection />
-      <Footer />
+      <div className="relative z-10">
+        <Navbar />
+        <HeroSection />
+        <TrustSection />
+        <ServicesSection />
+        <WorkSection />
+        <AboutSection />
+        <ProcessSection />
+        <TestimonialsSection />
+        <ProofSection />
+        <CTASection />
+        <Footer />
+      </div>
     </div>
   );
 }
