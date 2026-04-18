@@ -3,7 +3,7 @@ import pixarbrosLogo from "@/assets/pixarbros-logo.png";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 bg-background">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6">
       {/* Animated geometric background */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
         <svg className="absolute inset-0 w-full h-full opacity-[0.07]" xmlns="http://www.w3.org/2000/svg">
@@ -48,7 +48,7 @@ export default function HeroSection() {
         <div className="absolute top-2/3 left-1/2 w-1 h-1 bg-foreground/30 rounded-full animate-pulse-slow" style={{ animationDelay: "2s" }} />
 
         {/* Soft radial fade */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,var(--background)_85%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_40%,color-mix(in_oklab,var(--background)_75%,transparent)_90%)]" />
       </div>
 
       <div className="max-w-5xl mx-auto text-center relative z-10">

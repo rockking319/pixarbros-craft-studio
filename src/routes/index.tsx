@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useReveal } from "@/hooks/use-reveal";
 import Navbar from "@/components/Navbar";
+import AnimatedBackground from "@/components/AnimatedBackground";
 import HeroSection from "@/components/HeroSection";
 import TrustSection from "@/components/TrustSection";
 import ServicesSection from "@/components/ServicesSection";
@@ -28,7 +29,8 @@ function Index() {
   const ref = useReveal();
 
   return (
-    <div ref={ref}>
+    <div ref={ref} className="relative">
+      <AnimatedBackground />
       <Navbar />
       <HeroSection />
       <TrustSection />
