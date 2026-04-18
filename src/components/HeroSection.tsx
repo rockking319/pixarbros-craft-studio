@@ -47,8 +47,8 @@ export default function HeroSection() {
         <div className="absolute bottom-1/4 right-1/3 w-1.5 h-1.5 bg-foreground/20 rounded-full animate-pulse-slow" style={{ animationDelay: "1s" }} />
         <div className="absolute top-2/3 left-1/2 w-1 h-1 bg-foreground/30 rounded-full animate-pulse-slow" style={{ animationDelay: "2s" }} />
 
-        {/* Soft radial fade */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_40%,color-mix(in_oklab,var(--background)_75%,transparent)_90%)]" />
+        {/* Soft radial fade (very subtle so blobs remain visible) */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_60%,color-mix(in_oklab,var(--background)_30%,transparent)_100%)]" />
       </div>
 
       <div className="max-w-5xl mx-auto text-center relative z-10">

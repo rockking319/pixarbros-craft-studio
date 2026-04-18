@@ -169,9 +169,6 @@
 
   html {
     background-color: var(--color-background);
-  }
-
-  html {
     scroll-behavior: smooth;
   }
 
