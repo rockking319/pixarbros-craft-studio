@@ -1,4 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { useReveal } from "@/hooks/use-reveal";
 import Navbar from "@/components/Navbar";
 import AnimatedBackground from "@/components/AnimatedBackground";
@@ -13,19 +12,7 @@ import ProofSection from "@/components/ProofSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 
-export const Route = createFileRoute("/")({
-  component: Index,
-  head: () => ({
-    meta: [
-      { title: "Pixarbros — Creative Studio | Design, Motion & Web" },
-      { name: "description", content: "Pixarbros is a premium creative studio crafting high-impact brand identity, motion design, and web experiences for ambitious brands." },
-      { property: "og:title", content: "Pixarbros — Creative Studio" },
-      { property: "og:description", content: "Design that moves brands forward. High-impact visuals, motion, and digital experiences." },
-    ],
-  }),
-});
-
-function Index() {
+export default function App() {
   const ref = useReveal();
 
   return (
