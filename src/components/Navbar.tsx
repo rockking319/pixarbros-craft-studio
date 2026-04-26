@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Send } from "lucide-react";
 import pixarbrosLogo from "@/assets/pixarbros-logo.png";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const navLinks = [
   { label: "Home", href: "#" },
@@ -43,13 +44,13 @@ export default function Navbar() {
             <img
               src={pixarbrosLogo}
               alt="Pixarbros"
-              className="h-8 md:h-9 w-auto transition-transform duration-500 group-hover:rotate-[8deg] group-hover:scale-110"
+              className="logo-adaptive h-8 md:h-9 w-auto transition-transform duration-500 group-hover:rotate-[8deg] group-hover:scale-110"
             />
             <span
               className="font-heading text-lg md:text-xl font-bold tracking-tight bg-clip-text text-transparent"
               style={{
                 backgroundImage:
-                  "linear-gradient(90deg, #0f0f0f, #7F5BFF, #00D4FF, #0f0f0f)",
+                  "linear-gradient(90deg, var(--color-foreground), #7F5BFF, #00D4FF, var(--color-foreground))",
                 backgroundSize: "300% 100%",
                 animation: "gradient-shift 8s ease infinite",
               }}
