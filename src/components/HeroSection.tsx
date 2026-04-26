@@ -59,16 +59,10 @@ export default function HeroSection() {
           Creative Studio — Animator · Designer · Developer
         </p>
         <h1
-          className="font-heading text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-semibold uppercase mb-8 whitespace-nowrap"
+          className="font-heading text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-semibold uppercase mb-8 whitespace-nowrap text-[#222831] dark:text-[#FFFFFF]"
           style={{
             letterSpacing: "0.02em",
             lineHeight: "1.05",
-            backgroundImage:
-              "linear-gradient(90deg, #FF6B6B, #7F5BFF, #00D4FF)",
-            WebkitBackgroundClip: "text",
-            backgroundClip: "text",
-            color: "transparent",
-            WebkitTextFillColor: "transparent",
           }}
         >
           <span className="block">Design. Motion.</span>
