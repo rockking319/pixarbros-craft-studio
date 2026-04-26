@@ -53,12 +53,27 @@ export default function HeroSection() {
 
       <div className="max-w-5xl mx-auto text-center relative z-10">
         <div className="flex justify-center mb-10 animate-reveal-fade" style={{ animationDelay: "0.1s" }}>
-          <img src={pixarbrosLogo} alt="Pixarbros" className="h-16 md:h-20 w-auto" />
+          <img src={pixarbrosLogo} alt="Pixarbros" className="logo-adaptive h-16 md:h-20 w-auto" />
         </div>
         <p className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-8 animate-reveal-fade" style={{ animationDelay: "0.2s" }}>
           Creative Studio — Animator · Designer · Developer
         </p>
-        <h1 className="font-heading text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-semibold uppercase mb-8 animate-reveal-up whitespace-nowrap text-[#0f0f0f] dark:text-[#F7F7F7]" style={{ animationDelay: "0.3s", letterSpacing: "0.02em", lineHeight: "1.05" }}>
+        <h1
+          className="font-heading text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-semibold uppercase mb-8 animate-reveal-up whitespace-nowrap"
+          style={{
+            animationDelay: "0.3s",
+            letterSpacing: "0.02em",
+            lineHeight: "1.05",
+            backgroundImage:
+              "linear-gradient(90deg, #FF6B6B, #7F5BFF, #00D4FF, #7F5BFF, #FF6B6B)",
+            backgroundSize: "300% 100%",
+            WebkitBackgroundClip: "text",
+            backgroundClip: "text",
+            color: "transparent",
+            WebkitTextFillColor: "transparent",
+            animation: "gradient-shift 10s ease infinite",
+          }}
+        >
           <span className="block">Design. Motion.</span>
           <span className="block text-center">Code.</span>
         </h1>
