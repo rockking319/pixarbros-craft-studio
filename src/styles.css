@@ -154,6 +154,39 @@
   --surface-foreground: oklch(0.2 0 0);
 }
 
+.dark {
+  /* Deep dark slate base similar to #0f172a */
+  --background: oklch(0.18 0.02 265);
+  --foreground: oklch(0.96 0.01 250);
+  --card: oklch(0.22 0.02 265);
+  --card-foreground: oklch(0.96 0.01 250);
+  --popover: oklch(0.22 0.02 265);
+  --popover-foreground: oklch(0.96 0.01 250);
+  --primary: oklch(0.96 0.01 250);
+  --primary-foreground: oklch(0.18 0.02 265);
+  --secondary: oklch(0.27 0.02 265);
+  --secondary-foreground: oklch(0.96 0.01 250);
+  --muted: oklch(0.27 0.02 265);
+  --muted-foreground: oklch(0.7 0.02 260);
+  --accent: oklch(0.3 0.03 270);
+  --accent-foreground: oklch(0.96 0.01 250);
+  --destructive: oklch(0.6 0.22 27);
+  --destructive-foreground: oklch(0.98 0.01 250);
+  --border: oklch(0.32 0.02 265);
+  --input: oklch(0.32 0.02 265);
+  --ring: oklch(0.7 0.15 280);
+  --sidebar: oklch(0.2 0.02 265);
+  --sidebar-foreground: oklch(0.96 0.01 250);
+  --sidebar-primary: oklch(0.7 0.15 280);
+  --sidebar-primary-foreground: oklch(0.18 0.02 265);
+  --sidebar-accent: oklch(0.27 0.02 265);
+  --sidebar-accent-foreground: oklch(0.96 0.01 250);
+  --sidebar-border: oklch(0.32 0.02 265);
+  --sidebar-ring: oklch(0.7 0.15 280);
+  --surface: oklch(0.24 0.02 265);
+  --surface-foreground: oklch(0.96 0.01 250);
+}
+
 @layer base {
   * {
     border-color: var(--color-border);
@@ -165,16 +198,35 @@
     font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.5s ease, color 0.4s ease;
   }
 
   html {
     background-color: var(--color-background);
     scroll-behavior: smooth;
+    transition: background-color 0.5s ease;
+  }
+
+  /* Smooth theme transition for common surfaces */
+  body, body * {
+    transition-property: background-color, border-color, color, fill, stroke, box-shadow;
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  /* Don't override transform/opacity-driven animations */
+  body *[class*="animate-"],
+  body *[style*="animation"] {
+    transition-property: background-color, border-color, color, fill, stroke, box-shadow;
   }
 
   ::selection {
-    background-color: oklch(0.07 0 0);
-    color: oklch(1 0 0);
+    background-color: var(--color-foreground);
+    color: var(--color-background);
+  }
+
+  /* Invert the dark logo PNG so it reads on dark backgrounds */
+  .dark img.logo-adaptive {
+    filter: invert(1) hue-rotate(180deg) brightness(1.1);
   }
 }
 
