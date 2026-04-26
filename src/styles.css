@@ -185,6 +185,10 @@
   --sidebar-ring: oklch(0.7 0.15 280);
   --surface: oklch(0.24 0.02 265);
   --surface-foreground: oklch(0.96 0.01 250);
+  --bg-wash-1: #1a0f2e;
+  --bg-wash-2: #0f1a3a;
+  --bg-wash-3: #0a1530;
+  --bg-wash-4: #1a0f2e;
 }
 
 @layer base {
