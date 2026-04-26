@@ -87,16 +87,20 @@ export default function Navbar() {
             >
               Start a Project
             </a>
+            <ThemeToggle />
           </div>
 
           {/* Mobile toggle */}
-          <button
-            className="md:hidden p-2 text-foreground transition-transform duration-300 hover:scale-110"
-            onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label="Toggle menu"
-          >
-            {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          <div className="md:hidden flex items-center gap-2">
+            <ThemeToggle />
+            <button
+              className="p-2 text-foreground transition-transform duration-300 hover:scale-110"
+              onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
       </nav>
 
