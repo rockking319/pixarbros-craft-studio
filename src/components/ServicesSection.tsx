@@ -40,10 +40,10 @@ export default function ServicesSection() {
       <div className="relative max-w-7xl mx-auto px-6 md:px-12">
         <div className="reveal-on-scroll mb-20">
           <p className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-4">What We Do</p>
-          <h2 className="font-heading text-3xl md:text-5xl font-bold tracking-tight">
+          <h2 className="font-heading text-3xl md:text-5xl font-bold tracking-tight text-[#222831] dark:text-[#FFFFFF]">
             Solutions, Not Just
             <br />
-            <span className="text-muted-foreground">Services.</span>
+            <span className="text-[#222831]/70 dark:text-[#FFFFFF]/70">Services.</span>
           </h2>
         </div>
 
@@ -76,10 +76,10 @@ export default function ServicesSection() {
                     >
                       <s.icon className="w-6 h-6 text-white" strokeWidth={2} />
                     </div>
-                    <h3 className="font-heading text-xl md:text-2xl font-semibold mb-3 tracking-tight text-foreground">
+                    <h3 className="font-heading text-xl md:text-2xl font-semibold mb-3 tracking-tight text-[#222831] dark:text-[#FFFFFF]">
                       {s.title}
                     </h3>
-                    <p className="text-sm text-foreground/60 leading-relaxed">{s.desc}</p>
+                    <p className="text-sm text-[#222831]/70 dark:text-[#FFFFFF]/70 leading-relaxed">{s.desc}</p>
                   </div>
 
                   <div className="relative z-10 flex items-center gap-2 text-xs tracking-[0.2em] uppercase text-foreground/50">

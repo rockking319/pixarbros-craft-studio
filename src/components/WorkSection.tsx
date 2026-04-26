@@ -92,8 +92,8 @@ export default function WorkSection() {
           <p className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-4">
             Selected Work
           </p>
-          <h2 className="font-heading text-3xl md:text-5xl font-bold tracking-tight">
-            Featured <span className="text-muted-foreground">Projects.</span>
+          <h2 className="font-heading text-3xl md:text-5xl font-bold tracking-tight text-[#222831] dark:text-[#FFFFFF]">
+            Featured <span className="text-[#222831]/70 dark:text-[#FFFFFF]/70">Projects.</span>
           </h2>
         </div>
         <p className="reveal-on-scroll text-muted-foreground text-base md:text-lg mb-16 max-w-xl">
@@ -135,7 +135,7 @@ export default function WorkSection() {
                   <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground mb-2">
                     {p.category}
                   </p>
-                  <h3 className="font-heading text-xl md:text-2xl font-semibold tracking-tight mb-2">
+                  <h3 className="font-heading text-xl md:text-2xl font-semibold tracking-tight mb-2 text-[#222831] dark:text-[#FFFFFF]">
                     {p.title}
                   </h3>
                   <p className="text-sm text-muted-foreground">
