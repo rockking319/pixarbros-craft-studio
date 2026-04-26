@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
           <div>
             <div className="flex items-center gap-3 mb-2">
-              <img src={pixarbrosLogo} alt="Pixarbros" className="h-6 w-auto" />
+              <img src={pixarbrosLogo} alt="Pixarbros" className="logo-adaptive h-6 w-auto" />
               <span className="font-heading text-lg font-bold tracking-tight">Pixarbros</span>
             </div>
             <p className="text-sm text-muted-foreground">Design that moves brands forward.</p>
