@@ -60,14 +60,14 @@ export default function ServicesSection() {
               >
                 {/* FRONT — Glassmorphism */}
                 <div
-                  className="absolute inset-0 rounded-2xl border border-white/20 bg-white/40 backdrop-blur-xl p-8 md:p-10 flex flex-col justify-between shadow-[0_8px_32px_rgba(0,0,0,0.08)] overflow-hidden"
+                  className="absolute inset-0 rounded-2xl border border-white/20 dark:border-white/10 bg-white/40 dark:bg-white/[0.04] backdrop-blur-xl p-8 md:p-10 flex flex-col justify-between shadow-[0_8px_32px_rgba(0,0,0,0.08)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.4)] overflow-hidden"
                   style={{ backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden" }}
                 >
                   {/* Gradient orb accent */}
                   <div
                     className={`absolute -top-20 -right-20 w-56 h-56 rounded-full bg-gradient-to-br ${s.gradient} opacity-40 blur-2xl`}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/60 to-white/10 pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/60 to-white/10 dark:from-white/5 dark:to-transparent pointer-events-none" />
 
                   <div className="relative z-10">
                     <div
