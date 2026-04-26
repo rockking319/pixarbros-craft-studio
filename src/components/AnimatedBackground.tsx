@@ -66,10 +66,10 @@ export default function AnimatedBackground() {
     >
       {/* Base soft gradient wash */}
       <div
-        className="absolute inset-0 opacity-60"
+        className="absolute inset-0 opacity-60 dark:opacity-40"
         style={{
           background:
-            "linear-gradient(120deg, #fff5f5 0%, #f3efff 35%, #eef9ff 70%, #f0fff7 100%)",
+            "linear-gradient(120deg, var(--bg-wash-1, #fff5f5) 0%, var(--bg-wash-2, #f3efff) 35%, var(--bg-wash-3, #eef9ff) 70%, var(--bg-wash-4, #f0fff7) 100%)",
           backgroundSize: "300% 300%",
           animation: "gradient-shift 18s ease infinite",
         }}
