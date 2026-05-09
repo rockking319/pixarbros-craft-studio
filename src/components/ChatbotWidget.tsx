@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Sparkles, Send, X, Minus, Bot } from "lucide-react";
+import { Send, X, Minus } from "lucide-react";
+import pixarbrosLogo from "@/assets/pixarbros-logo.png";
 
 const WEBHOOK_URL =
   "https://kiwiga1809.app.n8n.cloud/webhook/Pixarbros_chatbot";
