@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Sparkles, Send, X, Minus, Bot } from "lucide-react";
 
 const WEBHOOK_URL =
-  "https://kiwiga1809.app.n8n.cloud/webhook-test/pixarbros-chatbot";
+  "https://kiwiga1809.app.n8n.cloud/webhook/pixarbros-chatbot";
 const STORAGE_KEY = "pixarbros-chat-history";
 const SESSION_KEY = "pixarbros-chat-session";
 
