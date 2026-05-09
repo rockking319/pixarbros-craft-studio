@@ -32,6 +32,7 @@ export default function App() {
         <CTASection />
         <Footer />
       </div>
+      <ChatbotWidget />
     </div>
   );
 }
