@@ -208,8 +208,8 @@ export default function ChatbotWidget() {
               <div className="flex items-center justify-between px-4 py-3 border-b border-white/10 bg-white/[0.02]">
                 <div className="flex items-center gap-3">
                   <div className="relative">
-                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#0B0F19] to-[#1a1530] flex items-center justify-center ring-1 ring-white/20 p-1.5">
-                      <img src={pixarbrosLogo} alt="Pixarbros" className="w-full h-full object-contain" />
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#7C3AED] to-[#06B6D4] flex items-center justify-center ring-1 ring-white/20 p-2">
+                      <img src={pixarbrosLogo} alt="Pixarbros" className="w-full h-full object-contain brightness-0 invert" />
                     </div>
                     <span className="absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full bg-emerald-400 ring-2 ring-[#0B0F19] animate-pulse" />
                   </div>
