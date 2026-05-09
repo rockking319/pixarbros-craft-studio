@@ -11,6 +11,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import ProofSection from "@/components/ProofSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import ChatbotWidget from "@/components/ChatbotWidget";
 
 export default function App() {
   const ref = useReveal();
