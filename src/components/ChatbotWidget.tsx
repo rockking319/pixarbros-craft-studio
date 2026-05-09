@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Sparkles, Send, X, Minus, Bot } from "lucide-react";
+import { Send, X, Minus } from "lucide-react";
+import pixarbrosLogo from "@/assets/pixarbros-logo.png";
 
 const WEBHOOK_URL =
   "https://kiwiga1809.app.n8n.cloud/webhook/Pixarbros_chatbot";
@@ -171,9 +172,10 @@ export default function ChatbotWidget() {
             aria-label="Open Pixarbros AI chat"
             className="fixed bottom-5 right-5 md:bottom-7 md:right-7 z-[100] group"
           >
-            <span className="absolute inset-0 rounded-full bg-gradient-to-br from-[#7C3AED] to-[#06B6D4] blur-xl opacity-70 animate-pulse" />
-            <span className="relative flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-full bg-gradient-to-br from-[#7C3AED] to-[#06B6D4] shadow-[0_10px_40px_-5px_rgba(124,58,237,0.6)] ring-1 ring-white/20">
-              <Sparkles className="w-6 h-6 md:w-7 md:h-7 text-white drop-shadow" />
+            <span className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[#7C3AED] to-[#06B6D4] blur-xl opacity-70 animate-pulse" />
+            <span className="relative flex items-center justify-center w-16 h-16 md:w-[72px] md:h-[72px] rounded-2xl bg-gradient-to-br from-[#0B0F19] via-[#1a1530] to-[#0B0F19] shadow-[0_10px_40px_-5px_rgba(124,58,237,0.6)] ring-1 ring-white/20 p-2.5 overflow-hidden">
+              <span className="absolute inset-0 bg-gradient-to-br from-[#7C3AED]/20 to-[#06B6D4]/20" />
+              <img src={pixarbrosLogo} alt="Pixarbros" className="relative w-full h-full object-contain drop-shadow-[0_2px_8px_rgba(124,58,237,0.6)]" />
             </span>
           </motion.button>
         )}
@@ -207,8 +209,8 @@ export default function ChatbotWidget() {
               <div className="flex items-center justify-between px-4 py-3 border-b border-white/10 bg-white/[0.02]">
                 <div className="flex items-center gap-3">
                   <div className="relative">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#7C3AED] to-[#06B6D4] flex items-center justify-center ring-1 ring-white/20">
-                      <Bot className="w-5 h-5 text-white" />
+                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#0B0F19] to-[#1a1530] flex items-center justify-center ring-1 ring-white/20 p-1.5">
+                      <img src={pixarbrosLogo} alt="Pixarbros" className="w-full h-full object-contain" />
                     </div>
                     <span className="absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full bg-emerald-400 ring-2 ring-[#0B0F19] animate-pulse" />
                   </div>
