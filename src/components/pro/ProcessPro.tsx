@@ -29,7 +29,6 @@ export default function ProcessPro() {
                   <div className="text-center">
                     <div className="relative mx-auto w-24 h-24 rounded-2xl bg-[var(--gradient-brand)] p-[1.5px]">
                       <div className="w-full h-full rounded-2xl bg-[#0a0e1a] grid place-items-center">
-                        <Icon className="w-9 h-9 text-gradient" style={{ stroke: "url(#g)" }} />
                         <Icon className="w-9 h-9 text-[var(--brand)]" />
                       </div>
                       <span className="absolute -top-3 -right-3 w-8 h-8 rounded-full glass-strong grid place-items-center text-xs font-bold text-gradient">
