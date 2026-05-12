@@ -65,8 +65,22 @@ export default function HeroSection() {
             lineHeight: "1.05",
           }}
         >
-          <span className="block">Design. Motion.</span>
-          <span className="block text-center">Code.</span>
+          <span
+            className="block opacity-0"
+            style={{
+              animation: "hero-rise 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards",
+            }}
+          >
+            Design. Motion.
+          </span>
+          <span
+            className="block text-center opacity-0"
+            style={{
+              animation: "hero-rise 1s cubic-bezier(0.16, 1, 0.3, 1) 0.45s forwards",
+            }}
+          >
+            Code.
+          </span>
         </h1>
         <p className="text-muted-foreground text-base md:text-lg max-w-xl mx-auto mb-12 leading-relaxed animate-reveal-up" style={{ animationDelay: "0.5s" }}>
           Building sharp digital experiences through animation, design, and modern web solutions.
