@@ -7,7 +7,6 @@ export default function AnimatedBackground() {
   const blob4Ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Disable parallax on mobile (<= 768px) and for users who prefer reduced motion
     const mql = window.matchMedia("(max-width: 768px)");
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
     if (mql.matches || reduced.matches) return;
@@ -17,13 +16,11 @@ export default function AnimatedBackground() {
     let rafId = 0;
 
     const onMouseMove = (e: MouseEvent) => {
-      // Normalize to -1..1
       target.x = (e.clientX / window.innerWidth) * 2 - 1;
       target.y = (e.clientY / window.innerHeight) * 2 - 1;
     };
 
     const tick = () => {
-      // Smooth easing toward target (lerp)
       current.x += (target.x - current.x) * 0.04;
       current.y += (target.y - current.y) * 0.04;
 
@@ -40,11 +37,10 @@ export default function AnimatedBackground() {
         el.style.transform = `translate3d(${tx}px, ${ty}px, 0) rotate(${rz}deg) scale(${scale})`;
       };
 
-      // Different depths create parallax layering
-      apply(blob1Ref.current, 40, 4, 1);
-      apply(blob2Ref.current, -55, -3, 1.02);
-      apply(blob3Ref.current, 30, 2, 0.98);
-      apply(blob4Ref.current, -25, 5, 1);
+      apply(blob1Ref.current, 50, 4, 1);
+      apply(blob2Ref.current, -65, -3, 1.05);
+      apply(blob3Ref.current, 35, 2, 0.98);
+      apply(blob4Ref.current, -30, 5, 1);
 
       rafId = requestAnimationFrame(tick);
     };
@@ -58,83 +54,127 @@ export default function AnimatedBackground() {
     };
   }, []);
 
+  // Subtle SVG noise as data URI for the grain overlay
+  const noiseSvg =
+    "data:image/svg+xml;utf8," +
+    encodeURIComponent(
+      `<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'>
+        <filter id='n'>
+          <feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/>
+          <feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.6 0'/>
+        </filter>
+        <rect width='100%' height='100%' filter='url(#n)' opacity='0.5'/>
+      </svg>`,
+    );
+
   return (
     <div
       className="fixed inset-0 pointer-events-none overflow-hidden"
       aria-hidden="true"
       style={{ perspective: "1200px", zIndex: 0 }}
     >
-      {/* Base soft gradient wash */}
+      {/* Deep navy/black base */}
       <div
-        className="absolute inset-0 opacity-60 dark:opacity-40"
+        className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(120deg, var(--bg-wash-1, #fff5f5) 0%, var(--bg-wash-2, #f3efff) 35%, var(--bg-wash-3, #eef9ff) 70%, var(--bg-wash-4, #f0fff7) 100%)",
-          backgroundSize: "300% 300%",
-          animation: "gradient-shift 18s ease infinite",
+            "radial-gradient(ellipse at 20% 10%, #0d1633 0%, transparent 55%), radial-gradient(ellipse at 80% 90%, #160a33 0%, transparent 55%), linear-gradient(180deg, #060814 0%, #04060f 100%)",
         }}
       />
 
-      {/* Animated colored blobs with parallax (wrapper handles mouse, inner handles float) */}
+      {/* Animated gradient wash (subtle hue shift) */}
+      <div
+        className="absolute inset-0 opacity-40 mix-blend-screen"
+        style={{
+          background:
+            "linear-gradient(120deg, #1e3a8a 0%, #4c1d95 35%, #1e1b4b 70%, #0f172a 100%)",
+          backgroundSize: "300% 300%",
+          animation: "gradient-shift 22s ease infinite",
+        }}
+      />
+
+      {/* Glow orbs with parallax */}
       <div
         ref={blob1Ref}
-        className="absolute top-[-10%] left-[-5%] w-[520px] h-[520px] will-change-transform"
+        className="absolute top-[-12%] left-[-8%] w-[640px] h-[640px] will-change-transform"
         style={{ transition: "transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)" }}
       >
         <div
-          className="w-full h-full rounded-full blur-3xl opacity-40"
+          className="w-full h-full rounded-full opacity-60"
           style={{
             background:
-              "radial-gradient(circle, #FF6B6B 0%, #FF8E53 50%, transparent 70%)",
-            animation: "blob-1 22s ease-in-out infinite",
+              "radial-gradient(circle, #3b82f6 0%, #1e40af 40%, transparent 70%)",
+            filter: "blur(90px)",
+            animation: "blob-1 24s ease-in-out infinite",
           }}
         />
       </div>
 
       <div
         ref={blob2Ref}
-        className="absolute top-[30%] right-[-8%] w-[600px] h-[600px] will-change-transform"
+        className="absolute top-[20%] right-[-10%] w-[720px] h-[720px] will-change-transform"
         style={{ transition: "transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)" }}
       >
         <div
-          className="w-full h-full rounded-full blur-3xl opacity-35"
+          className="w-full h-full rounded-full opacity-55"
           style={{
             background:
-              "radial-gradient(circle, #7F5BFF 0%, #A56BFF 45%, transparent 70%)",
-            animation: "blob-2 26s ease-in-out infinite",
+              "radial-gradient(circle, #8b5cf6 0%, #5b21b6 40%, transparent 70%)",
+            filter: "blur(100px)",
+            animation: "blob-2 28s ease-in-out infinite",
           }}
         />
       </div>
 
       <div
         ref={blob3Ref}
-        className="absolute bottom-[-10%] left-[20%] w-[560px] h-[560px] will-change-transform"
+        className="absolute bottom-[-15%] left-[15%] w-[680px] h-[680px] will-change-transform"
         style={{ transition: "transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)" }}
       >
         <div
-          className="w-full h-full rounded-full blur-3xl opacity-35"
+          className="w-full h-full rounded-full opacity-50"
           style={{
             background:
-              "radial-gradient(circle, #00D4FF 0%, #5BFFB0 50%, transparent 70%)",
-            animation: "blob-3 30s ease-in-out infinite",
+              "radial-gradient(circle, #6366f1 0%, #312e81 45%, transparent 70%)",
+            filter: "blur(110px)",
+            animation: "blob-3 32s ease-in-out infinite",
           }}
         />
       </div>
 
       <div
         ref={blob4Ref}
-        className="absolute top-[55%] left-[40%] w-[480px] h-[480px] will-change-transform"
+        className="absolute top-[55%] left-[38%] w-[520px] h-[520px] will-change-transform"
         style={{ transition: "transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)" }}
       >
         <div
-          className="w-full h-full rounded-full blur-3xl opacity-25"
+          className="w-full h-full rounded-full opacity-40"
           style={{
             background:
-              "radial-gradient(circle, #FF6BD6 0%, #7F5BFF 55%, transparent 70%)",
-            animation: "blob-1 28s ease-in-out infinite reverse",
+              "radial-gradient(circle, #06b6d4 0%, #1e3a8a 55%, transparent 75%)",
+            filter: "blur(100px)",
+            animation: "blob-1 30s ease-in-out infinite reverse",
           }}
         />
       </div>
+
+      {/* Vignette for depth */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.55) 100%)",
+        }}
+      />
+
+      {/* Grain / noise overlay */}
+      <div
+        className="absolute inset-0 opacity-[0.06] mix-blend-overlay"
+        style={{
+          backgroundImage: `url("${noiseSvg}")`,
+          backgroundRepeat: "repeat",
+        }}
+      />
     </div>
   );
 }
