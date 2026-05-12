@@ -52,9 +52,12 @@ export default function StatsSection() {
           {stats.map((s, i) => (
             <div
               key={s.label}
-              className={`reveal-on-scroll stagger-${i + 1} group relative rounded-2xl p-[1px] transition-all duration-500 hover:-translate-y-2`}
-              style={{ animation: `float 6s ease-in-out ${i * 0.4}s infinite` }}
+              className={`reveal-on-scroll stagger-${i + 1} group relative`}
             >
+              <div
+                className="relative rounded-2xl p-[1px] transition-all duration-500 hover:-translate-y-2"
+                style={{ animation: `float 6s ease-in-out ${i * 0.4}s infinite` }}
+              >
               {/* Gradient border */}
               <div
                 className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${s.grad} opacity-40 group-hover:opacity-100 transition-opacity duration-500`}
