@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import AnimatedBackground from "@/components/AnimatedBackground";
 import HeroSection from "@/components/HeroSection";
 import TrustSection from "@/components/TrustSection";
+import StatsSection from "@/components/StatsSection";
 import ServicesSection from "@/components/ServicesSection";
 import WorkSection from "@/components/WorkSection";
 import AboutSection from "@/components/AboutSection";
@@ -23,6 +24,7 @@ export default function App() {
         <Navbar />
         <HeroSection />
         <TrustSection />
+        <StatsSection />
         <ServicesSection />
         <WorkSection />
         <AboutSection />
